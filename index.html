@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,18 +9,16 @@
     <style>
         /* Custom styles for resume formatting */
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
-
+        
         body {
             font-family: 'Inter', sans-serif;
-            background-color: #f7f7f7;
+            background-color: #f7f7f7; 
         }
 
         .resume-container {
-            max-width: 8.5in;
-            /* Standard US Letter width */
-            margin: 1rem auto;
-            padding: 0.8in 0.75in 0.8in 0.75in;
-            /* Further reduced overall padding */
+            max-width: 8.5in; /* Standard US Letter width */
+            margin: 0.5rem auto; /* Reduced margin */
+            padding: 0.5in 0.5in 0.5in 0.5in; /* Reduced overall padding for cleaner screen view */
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -39,37 +36,28 @@
         @media print {
             body {
                 background-color: white;
-                font-size: 9.0pt;
-                /* Aggressively reduced base print font size */
+                font-size: 9.0pt; /* Aggressively reduced base print font size */
             }
-
             .resume-container {
                 max-width: none;
                 margin: 0;
                 /* Aggressively tight print padding */
-                padding: 0.25in 0.5in 0.25in 0.5in;
+                padding: 0.25in 0.3in 0.25in 0.3in; /* Reduced side margins for max width usage */
                 box-shadow: none;
             }
-
             /* Ensure text is black and crisp for printing */
-            .text-gray-700,
-            .text-gray-600 {
+            .text-gray-700, .text-gray-600 {
                 color: #000 !important;
             }
-
             /* Hide the print control button when printing */
             .print-controls {
                 display: none !important;
             }
-
             .text-xs {
                 /* Even tighter font size for print descriptions */
-                font-size: 0.6rem;
-                /* Aggressively reduced descriptive font size */
-                line-height: 1.3;
-                /* Slight increase for readability */
+                font-size: 0.6rem; /* Aggressively reduced descriptive font size */
+                line-height: 1.3; /* Slight increase for readability */
             }
-
             /* Ensure dot characters are black in print */
             .filled-char {
                 color: #000 !important;
@@ -85,24 +73,17 @@
 
         /* Section Title Bar */
         .section-title-bar {
-            background-color: #e6e6e6;
-            /* Light gray background */
-            padding: 0.2rem 0;
-            /* Minimal padding */
-            margin-top: 0.6rem;
-            /* Reduced margin top */
-            margin-bottom: 0.1rem;
-            /* Minimal margin bottom */
+            background-color: #e6e6e6; /* Light gray background */
+            padding: 0.2rem 0; /* Minimal padding */
+            margin-top: 0.6rem; /* Reduced margin top */
+            margin-bottom: 0.1rem; /* Minimal margin bottom */
         }
 
         /* Custom Bullet point style (diamond/star) */
         .diamond-bullet::before {
-            content: "\2726";
-            /* Unicode for a four-point star (close to the diamond in the image) */
-            margin-right: 0.4rem;
-            /* Reduced margin */
-            color: #1f2937;
-            /* Dark gray */
+            content: "\2726"; /* Unicode for a four-point star (close to the diamond in the image) */
+            margin-right: 0.4rem; /* Reduced margin */
+            color: #1f2937; /* Dark gray */
             font-size: 0.8rem;
         }
 
@@ -111,25 +92,19 @@
             display: flex;
             align-items: center;
             flex-wrap: nowrap;
-            gap: 0.05rem;
-            /* Tiniest gap for character dots */
+            gap: 0.05rem; /* Tiniest gap for character dots */
         }
-
+        
         .dot-char {
             margin: 0 1px;
-            line-height: 1;
-            /* important for vertical alignment */
-            font-size: 1.1rem;
+            line-height: 1; /* important for vertical alignment */
+            font-size: 1.1rem; 
         }
-
         .filled-char {
-            color: #1f2937;
-            /* Dark gray for filled character dots */
+            color: #1f2937; /* Dark gray for filled character dots */
         }
-
         .empty-char {
-            color: #9ca3af;
-            /* Light gray for empty character dots */
+            color: #9ca3af; /* Light gray for empty character dots */
         }
     </style>
     <script>
@@ -145,25 +120,23 @@
         }
     </script>
 </head>
-
 <body>
-
+    
     <!-- PDF Download Control -->
     <div class="print-controls text-center my-4">
         <!-- Button uses window.print() to open the browser print dialog, where the user can choose "Save as PDF" -->
-        <button onclick="window.print()"
-            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-150 ease-in-out">
+        <button onclick="window.print()" class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-150 ease-in-out">
             Download PDF (Select 'Save as PDF' in the Print Menu)
         </button>
     </div>
 
     <div class="resume-container">
-
+        
         <!-- HEADER: NAME & CONTACT INFO -->
         <header class="text-center mb-2">
-            <h1 class="text-2xl font-bold tracking-wider text-primary-dark">JAIRAJ CHILUKALA</h1>
+            <h1 class="text-xl font-bold tracking-wider text-primary-dark">JAIRAJ CHILUKALA</h1>
             <p class="text-base text-gray-700 font-medium mt-0.5">Computer Science Student</p>
-
+            
             <div class="mt-1.5 text-xs text-gray-600 space-y-0.5">
                 <p>Hyderabad, India, Sri Shailaja Harmony Rd No.4, Kothapet, 500102</p>
                 <p class="flex justify-center items-center space-x-3">
@@ -181,13 +154,11 @@
         <div class="mt-0.5 text-xs text-gray-700">
             <div class="flex flex-col sm:flex-row mb-0.5">
                 <div class="font-semibold w-20 sm:w-24 shrink-0">Github:</div>
-                <a href="https://github.com/jairajc" target="_blank"
-                    class="text-blue-600 hover:underline break-all">https://github.com/jairajc</a>
+                <a href="https://github.com/jairajc" target="_blank" class="text-blue-600 hover:underline break-all">https://github.com/jairajc</a>
             </div>
             <div class="flex flex-col sm:flex-row mb-0.5">
                 <div class="font-semibold w-20 sm:w-24 shrink-0">LinkedIn:</div>
-                <a href="https://www.linkedin.com/in/jairaj-chilukala-6a534b3642" target="_blank"
-                    class="text-blue-600 hover:underline break-all">https://www.linkedin.com/in/jairaj-chilukala-6a534b3642</a>
+                <a href="https://www.linkedin.com/in/jairaj-chilukala-6a534b3642" target="_blank" class="text-blue-600 hover:underline break-all">https://www.linkedin.com/in/jairaj-chilukala-6a534b3642</a>
             </div>
         </div>
 
@@ -220,8 +191,7 @@
                 </div>
             </div>
             <p class="text-xs text-gray-700 ml-2 leading-tight">
-                Mentored students in Python fundamentals and debugging; conducted research into secure Identity and
-                Access Management (IAM) workflows.
+                Mentored students in Python fundamentals and debugging; conducted research into secure Identity and Access Management (IAM) workflows.
             </p>
         </div>
 
@@ -237,8 +207,7 @@
                 </div>
             </div>
             <p class="text-xs text-gray-700 ml-2 leading-tight">
-                Spearheaded initiatives and organized workshops/events promoting continuous learning, leadership, and
-                interdisciplinary skill development.
+                Spearheaded initiatives and organized workshops/events promoting continuous learning, leadership, and interdisciplinary skill development.
             </p>
         </div>
 
@@ -254,8 +223,7 @@
                 </div>
             </div>
             <p class="text-xs text-gray-700 ml-2 leading-tight">
-                Led student participation in coding challenges; mentored peers for the 100 Days GitHub Challenge to
-                promote open-source contributions.
+                Led student participation in coding challenges; mentored peers for the 100 Days GitHub Challenge to promote open-source contributions.
             </p>
         </div>
 
@@ -271,8 +239,7 @@
                 </div>
             </div>
             <p class="text-xs text-gray-700 ml-2 leading-tight">
-                Managed all digital presence, content, and campaigns; leveraged strategic digital outreach to boost
-                community participation and visibility.
+                Managed all digital presence, content, and campaigns; leveraged strategic digital outreach to boost community participation and visibility.
             </p>
         </div>
 
@@ -288,8 +255,7 @@
                 </div>
             </div>
             <p class="text-xs text-gray-700 ml-2 leading-tight">
-                Built industry connections and community partnerships; coordinated external collaborations and secured
-                resources for hackathon participation.
+                Built industry connections and community partnerships; coordinated external collaborations and secured resources for hackathon participation.
             </p>
         </div>
 
@@ -305,8 +271,7 @@
                 </div>
             </div>
             <p class="text-xs text-gray-700 ml-2 leading-tight">
-                Organized legal events (moot courts, counseling, quizzes); managed event execution and content to
-                promote critical thinking and legal awareness.
+                Organized legal events (moot courts, counseling, quizzes); managed event execution and content to promote critical thinking and legal awareness.
             </p>
         </div>
 
@@ -350,7 +315,7 @@
         <div class="section-title-bar text-center">
             <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Skills</h2>
         </div>
-
+        
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-0.5 mt-1 text-xs">
             <!-- Skill Bar Component -->
             <div id="skill-python" class="flex items-center space-x-2">
@@ -448,7 +413,7 @@
                     <span class="dot-char empty-char">○</span>
                 </div>
             </div>
-
+            
             <div id="skill-llm" class="flex items-center space-x-2">
                 <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">LLM</span>
                 <div class="separator-line"></div>
@@ -460,7 +425,7 @@
                     <span class="dot-char empty-char">○</span>
                 </div>
             </div>
-
+            
             <div id="skill-powerbi" class="flex items-center space-x-2">
                 <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">Power BI</span>
                 <div class="separator-line"></div>
@@ -502,7 +467,7 @@
         <div class="section-title-bar text-center">
             <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Languages</h2>
         </div>
-
+        
         <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-0.5 mt-1 text-xs">
             <!-- Language Bar Component -->
             <div id="lang-english" class="flex items-center space-x-2">
@@ -568,36 +533,31 @@
             <div>
                 <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">Serverless AI Chatbot</h3>
                 <p class="text-xs leading-tight ml-2">
-                    Developed a chatbot on a serverless architecture (AWS Lambda/Google Cloud) for scalable,
-                    cost-effective AI model deployment.
+                    Developed a chatbot on a serverless architecture (AWS Lambda/Google Cloud) for scalable, cost-effective AI model deployment.
                 </p>
             </div>
             <div>
                 <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">Finance Regret Forecaster</h3>
                 <p class="text-xs leading-tight ml-2">
-                    Predictive model designed to forecast the likelihood or extent of future regret associated with
-                    specific financial decisions.
+                    Predictive model designed to forecast the likelihood or extent of future regret associated with specific financial decisions.
                 </p>
             </div>
             <div>
                 <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">Campus Orbit</h3>
                 <p class="text-xs leading-tight ml-2">
-                    Centralized platform to track faculty availability, venue details, and provide real-time mess menu
-                    updates for university problems.
+                    Centralized platform to track faculty availability, venue details, and provide real-time mess menu updates for university problems.
                 </p>
             </div>
             <div>
                 <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">AI Resume Analyser</h3>
                 <p class="text-xs leading-tight ml-2">
-                    NLP application to parse, score, and analyze resumes, extracting skills and matching them against
-                    job descriptions.
+                    NLP application to parse, score, and analyze resumes, extracting skills and matching them against job descriptions.
                 </p>
             </div>
             <div>
                 <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">Persona Detection</h3>
                 <p class="text-xs leading-tight ml-2">
-                    System using text analysis/behavioral data to categorize a user's dominant personality traits or
-                    behavioral persona.
+                    System using text analysis/behavioral data to categorize a user's dominant personality traits or behavioral persona.
                 </p>
             </div>
         </div>
@@ -610,21 +570,17 @@
             <div>
                 <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">1. Solar Tracking and Smart Shed</h3>
                 <p class="text-xs leading-tight ml-2">
-                    <span class="font-semibold">Full Title:</span> IoT-Based Solar Tracking and Smart Shed for
-                    Sustainable and Cost-Effective Energy Harvesting
+                    <span class="font-semibold">Full Title:</span> IoT-Based Solar Tracking and Smart Shed for Sustainable and Cost-Effective Energy Harvesting
                 </p>
             </div>
             <div>
-                <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">2. Secure Medical Image Sharing and Data
-                    Storage</h3>
+                <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">2. Secure Medical Image Sharing and Data Storage</h3>
                 <p class="text-xs leading-tight ml-2">
-                    <span class="font-semibold">Full Title:</span> Towards Secure Medical Image Sharing and Medical IoT
-                    Data Storage using Smart Contracts and Blockchain
+                    <span class="font-semibold">Full Title:</span> Towards Secure Medical Image Sharing and Medical IoT Data Storage using Smart Contracts and Blockchain
                 </p>
             </div>
         </div>
-
+        
     </div>
 </body>
-
 </html>
