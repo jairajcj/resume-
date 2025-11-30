@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jairaj Chilukala - Resume</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Custom styles for resume formatting */
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f7f7f7;
+        }
+
+        .resume-container {
+            max-width: 8.5in;
+            /* Standard US Letter width */
+            margin: 1rem auto;
+            padding: 0.8in 0.75in 0.8in 0.75in;
+            /* Further reduced overall padding */
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive adjustments for mobile */
+        @media (max-width: 640px) {
+            .resume-container {
+                margin: 0.5rem auto;
+                padding: 1rem;
+                box-shadow: none;
+            }
+        }
+
+        /* Print styles - EXTREMELY TIGHT FOR 1-2 PAGE FIT */
+        @media print {
+            body {
+                background-color: white;
+                font-size: 9.0pt;
+                /* Aggressively reduced base print font size */
+            }
+
+            .resume-container {
+                max-width: none;
+                margin: 0;
+                /* Aggressively tight print padding */
+                padding: 0.25in 0.5in 0.25in 0.5in;
+                box-shadow: none;
+            }
+
+            /* Ensure text is black and crisp for printing */
+            .text-gray-700,
+            .text-gray-600 {
+                color: #000 !important;
+            }
+
+            /* Hide the print control button when printing */
+            .print-controls {
+                display: none !important;
+            }
+
+            .text-xs {
+                /* Even tighter font size for print descriptions */
+                font-size: 0.6rem;
+                /* Aggressively reduced descriptive font size */
+                line-height: 1.3;
+                /* Slight increase for readability */
+            }
+
+            /* Ensure dot characters are black in print */
+            .filled-char {
+                color: #000 !important;
+            }
+        }
+
+        /* Separator line style */
+        .separator-line {
+            border-bottom: 1px dotted #a0a0a0;
+            flex-grow: 1;
+            margin: 0 0.5rem;
+        }
+
+        /* Section Title Bar */
+        .section-title-bar {
+            background-color: #e6e6e6;
+            /* Light gray background */
+            padding: 0.2rem 0;
+            /* Minimal padding */
+            margin-top: 0.6rem;
+            /* Reduced margin top */
+            margin-bottom: 0.1rem;
+            /* Minimal margin bottom */
+        }
+
+        /* Custom Bullet point style (diamond/star) */
+        .diamond-bullet::before {
+            content: "\2726";
+            /* Unicode for a four-point star (close to the diamond in the image) */
+            margin-right: 0.4rem;
+            /* Reduced margin */
+            color: #1f2937;
+            /* Dark gray */
+            font-size: 0.8rem;
+        }
+
+        /* Skill dot character styling */
+        .skill-bar-container {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            gap: 0.05rem;
+            /* Tiniest gap for character dots */
+        }
+
+        .dot-char {
+            margin: 0 1px;
+            line-height: 1;
+            /* important for vertical alignment */
+            font-size: 1.1rem;
+        }
+
+        .filled-char {
+            color: #1f2937;
+            /* Dark gray for filled character dots */
+        }
+
+        .empty-char {
+            color: #9ca3af;
+            /* Light gray for empty character dots */
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'primary-dark': '#1f2937',
+                        'light-bg': '#e6e6e6',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+
+    <!-- PDF Download Control -->
+    <div class="print-controls text-center my-4">
+        <!-- Button uses window.print() to open the browser print dialog, where the user can choose "Save as PDF" -->
+        <button onclick="window.print()"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg shadow-lg transition duration-150 ease-in-out">
+            Download PDF (Select 'Save as PDF' in the Print Menu)
+        </button>
+    </div>
+
+    <div class="resume-container">
+
+        <!-- HEADER: NAME & CONTACT INFO -->
+        <header class="text-center mb-2">
+            <h1 class="text-2xl font-bold tracking-wider text-primary-dark">JAIRAJ CHILUKALA</h1>
+            <p class="text-base text-gray-700 font-medium mt-0.5">Computer Science Student</p>
+
+            <div class="mt-1.5 text-xs text-gray-600 space-y-0.5">
+                <p>Hyderabad, India, Sri Shailaja Harmony Rd No.4, Kothapet, 500102</p>
+                <p class="flex justify-center items-center space-x-3">
+                    <span>jairajchilukalagit@gmail.com</span>
+                    <span class="text-xl leading-none">|</span>
+                    <span>+91 9010139434</span>
+                </p>
+            </div>
+        </header>
+
+        <!-- Websites and Social Links -->
+        <div class="section-title-bar text-center">
+            <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Websites and Social Links</h2>
+        </div>
+        <div class="mt-0.5 text-xs text-gray-700">
+            <div class="flex flex-col sm:flex-row mb-0.5">
+                <div class="font-semibold w-20 sm:w-24 shrink-0">Github:</div>
+                <a href="https://github.com/jairajc" target="_blank"
+                    class="text-blue-600 hover:underline break-all">https://github.com/jairajc</a>
+            </div>
+            <div class="flex flex-col sm:flex-row mb-0.5">
+                <div class="font-semibold w-20 sm:w-24 shrink-0">LinkedIn:</div>
+                <a href="https://www.linkedin.com/in/jairaj-chilukala-6a534b3642" target="_blank"
+                    class="text-blue-600 hover:underline break-all">https://www.linkedin.com/in/jairaj-chilukala-6a534b3642</a>
+            </div>
+        </div>
+
+        <!-- SUMMARY -->
+        <div class="section-title-bar text-center">
+            <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Summary</h2>
+        </div>
+        <p class="text-xs text-gray-700 mt-0.5 leading-normal">
+            A tech-driven student leader with experience in full-stack development, machine learning, Power BI, and
+            backend systems. Holds senior roles in Codex, COE, Street Cause, and Utopia, and serves as Vice President of
+            the Life Long Learning and LegalEagle Clubs. Leads HackWithIndia initiatives like the 100 Days GitHub
+            Challenge. Strong in research, operations, and event management, with a proven record in technical seminars
+            and community projects.
+        </p>
+
+        <!-- EXPERIENCE -->
+        <div class="section-title-bar text-center">
+            <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Experience</h2>
+        </div>
+
+        <!-- Item 1: Teaching Assistant -->
+        <div class="mt-1">
+            <div class="flex justify-between items-start text-xs mb-0.5">
+                <div class="font-semibold text-primary-dark flex items-center">
+                    <span class="diamond-bullet"></span> Teaching Assistant, Woxsen University
+                </div>
+                <div class="text-right text-gray-600 space-y-0">
+                    <span class="font-medium whitespace-nowrap text-xs">Aug 2024 — May 2025</span>
+                    <p class="text-xs text-right italic text-gray-500">Hyderabad, Kamkole</p>
+                </div>
+            </div>
+            <p class="text-xs text-gray-700 ml-2 leading-tight">
+                Mentored students in Python fundamentals and debugging; conducted research into secure Identity and
+                Access Management (IAM) workflows.
+            </p>
+        </div>
+
+        <!-- Item 2: Vice President - Life Long Learning, Student Council Woxsen -->
+        <div class="mt-1">
+            <div class="flex justify-between items-start text-xs mb-0.5">
+                <div class="font-semibold text-primary-dark flex items-center">
+                    <span class="diamond-bullet"></span> Vice President - Life Long Learning, Student Council Woxsen
+                </div>
+                <div class="text-right text-gray-600 space-y-0">
+                    <span class="font-medium whitespace-nowrap text-xs">Feb 2025 — Mar 2026</span>
+                    <p class="text-xs text-right italic text-gray-500">Hyderabad Woxsen University</p>
+                </div>
+            </div>
+            <p class="text-xs text-gray-700 ml-2 leading-tight">
+                Spearheaded initiatives and organized workshops/events promoting continuous learning, leadership, and
+                interdisciplinary skill development.
+            </p>
+        </div>
+
+        <!-- Item 3: Campus Club, Hackwithindia -->
+        <div class="mt-1">
+            <div class="flex justify-between items-start text-xs mb-0.5">
+                <div class="font-semibold text-primary-dark flex items-center">
+                    <span class="diamond-bullet"></span> Campus Lead, Hackwithindia
+                </div>
+                <div class="text-right text-gray-600 space-y-0">
+                    <span class="font-medium whitespace-nowrap text-xs">Oct 2025</span>
+                    <p class="text-xs text-right italic text-gray-500">Hyderabad</p>
+                </div>
+            </div>
+            <p class="text-xs text-gray-700 ml-2 leading-tight">
+                Led student participation in coding challenges; mentored peers for the 100 Days GitHub Challenge to
+                promote open-source contributions.
+            </p>
+        </div>
+
+        <!-- Item 4: Digital Head, Street Cause Hyderabad (NGO) -->
+        <div class="mt-1">
+            <div class="flex justify-between items-start text-xs mb-0.5">
+                <div class="font-semibold text-primary-dark flex items-center">
+                    <span class="diamond-bullet"></span> Digital Head, Street Cause Hyderabad (NGO)
+                </div>
+                <div class="text-right text-gray-600 space-y-0">
+                    <span class="font-medium whitespace-nowrap text-xs">Aug 2024 — Aug 2025</span>
+                    <p class="text-xs text-right italic text-gray-500">Hyderabad</p>
+                </div>
+            </div>
+            <p class="text-xs text-gray-700 ml-2 leading-tight">
+                Managed all digital presence, content, and campaigns; leveraged strategic digital outreach to boost
+                community participation and visibility.
+            </p>
+        </div>
+
+        <!-- Item 5: Outreach Head, CodeX -->
+        <div class="mt-1">
+            <div class="flex justify-between items-start text-xs mb-0.5">
+                <div class="font-semibold text-primary-dark flex items-center">
+                    <span class="diamond-bullet"></span> Outreach Head, CodeX
+                </div>
+                <div class="text-right text-gray-600 space-y-0">
+                    <span class="font-medium whitespace-nowrap text-xs">Oct 2024 — Jan 2025</span>
+                    <p class="text-xs text-right italic text-gray-500">Hyderabad</p>
+                </div>
+            </div>
+            <p class="text-xs text-gray-700 ml-2 leading-tight">
+                Built industry connections and community partnerships; coordinated external collaborations and secured
+                resources for hackathon participation.
+            </p>
+        </div>
+
+        <!-- Item 6: Vice President, Law Club -->
+        <div class="mt-1">
+            <div class="flex justify-between items-start text-xs mb-0.5">
+                <div class="font-semibold text-primary-dark flex items-center">
+                    <span class="diamond-bullet"></span> Vice President, Law Club
+                </div>
+                <div class="text-right text-gray-600 space-y-0">
+                    <span class="font-medium whitespace-nowrap text-xs">Jan 2024 — Nov 2024</span>
+                    <p class="text-xs text-right italic text-gray-500">Woxsen University</p>
+                </div>
+            </div>
+            <p class="text-xs text-gray-700 ml-2 leading-tight">
+                Organized legal events (moot courts, counseling, quizzes); managed event execution and content to
+                promote critical thinking and legal awareness.
+            </p>
+        </div>
+
+        <!-- EDUCATION -->
+        <div class="section-title-bar text-center">
+            <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Education</h2>
+        </div>
+
+        <!-- Education Item 1: Woxsen University -->
+        <div class="mt-1">
+            <div class="flex justify-between items-start text-xs mb-0.5">
+                <div class="font-semibold text-primary-dark">Woxsen University</div>
+                <div class="text-right text-gray-600 space-y-0">
+                    <span class="font-medium whitespace-nowrap text-xs">2023 — 2027</span>
+                    <p class="text-xs text-right italic text-gray-500">Hyderabad</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-start text-xs text-gray-700 ml-2">
+                <span class="font-semibold">Bachelor of Technology,</span>
+                <span class="font-medium">CGPA 8.8</span>
+            </div>
+        </div>
+
+        <!-- Education Item 2: Aakash Institute -->
+        <div class="mt-1">
+            <div class="flex justify-between items-start text-xs mb-0.5">
+                <div class="font-semibold text-primary-dark">Aakash Institute</div>
+                <div class="text-right text-gray-600 space-y-0">
+                    <span class="font-medium whitespace-nowrap text-xs">2020 — 2023</span>
+                    <p class="text-xs text-right italic text-gray-500">Hyderabad</p>
+                </div>
+            </div>
+            <div class="flex justify-between items-start text-xs text-gray-700 ml-2">
+                <span class="font-semibold">12th standard,</span>
+                <span class="font-medium">CGPA 9.0</span>
+            </div>
+        </div>
+
+
+        <!-- SKILLS -->
+        <div class="section-title-bar text-center">
+            <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Skills</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-0.5 mt-1 text-xs">
+            <!-- Skill Bar Component -->
+            <div id="skill-python" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">Python</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="skill-js" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">JavaScript</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="skill-sql" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">SQL</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="skill-node" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">Node.JS</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="skill-react" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">React</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="skill-html" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">HTML</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="skill-css" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">CSS</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="skill-nlp" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">NLP</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="skill-llm" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">LLM</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="skill-powerbi" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">Power BI</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="skill-github" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">Github</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="skill-figma" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">Figma</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- LANGUAGES -->
+        <div class="section-title-bar text-center">
+            <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Languages</h2>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-0.5 mt-1 text-xs">
+            <!-- Language Bar Component -->
+            <div id="lang-english" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">English</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                </div>
+            </div>
+
+            <div id="lang-telugu" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">Telugu</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                </div>
+            </div>
+
+            <div id="lang-hindi" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">Hindi</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+
+            <div id="lang-spanish" class="flex items-center space-x-2">
+                <span class="w-1/3 sm:w-1/4 font-medium text-gray-700">Spanish</span>
+                <div class="separator-line"></div>
+                <div class="skill-bar-container">
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char filled-char">●</span>
+                    <span class="dot-char empty-char">○</span>
+                    <span class="dot-char empty-char">○</span>
+                    <span class="dot-char empty-char">○</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROJECTS -->
+        <div class="section-title-bar text-center">
+            <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Projects</h2>
+        </div>
+        <div class="mt-1 text-sm text-gray-700 space-y-1">
+            <div>
+                <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">Binary Addition using Turing Machine</h3>
+                <p class="text-xs leading-tight ml-2">
+                    Implementation of binary addition using the theoretical model of computation (Turing Machine).
+                </p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">Serverless AI Chatbot</h3>
+                <p class="text-xs leading-tight ml-2">
+                    Developed a chatbot on a serverless architecture (AWS Lambda/Google Cloud) for scalable,
+                    cost-effective AI model deployment.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">Finance Regret Forecaster</h3>
+                <p class="text-xs leading-tight ml-2">
+                    Predictive model designed to forecast the likelihood or extent of future regret associated with
+                    specific financial decisions.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">Campus Orbit</h3>
+                <p class="text-xs leading-tight ml-2">
+                    Centralized platform to track faculty availability, venue details, and provide real-time mess menu
+                    updates for university problems.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">AI Resume Analyser</h3>
+                <p class="text-xs leading-tight ml-2">
+                    NLP application to parse, score, and analyze resumes, extracting skills and matching them against
+                    job descriptions.
+                </p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">Persona Detection</h3>
+                <p class="text-xs leading-tight ml-2">
+                    System using text analysis/behavioral data to categorize a user's dominant personality traits or
+                    behavioral persona.
+                </p>
+            </div>
+        </div>
+
+        <!-- RESEARCH -->
+        <div class="section-title-bar text-center">
+            <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Research</h2>
+        </div>
+        <div class="mt-1 text-sm text-gray-700 space-y-1">
+            <div>
+                <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">1. Solar Tracking and Smart Shed</h3>
+                <p class="text-xs leading-tight ml-2">
+                    <span class="font-semibold">Full Title:</span> IoT-Based Solar Tracking and Smart Shed for
+                    Sustainable and Cost-Effective Energy Harvesting
+                </p>
+            </div>
+            <div>
+                <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">2. Secure Medical Image Sharing and Data
+                    Storage</h3>
+                <p class="text-xs leading-tight ml-2">
+                    <span class="font-semibold">Full Title:</span> Towards Secure Medical Image Sharing and Medical IoT
+                    Data Storage using Smart Contracts and Blockchain
+                </p>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>
