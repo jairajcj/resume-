@@ -20,9 +20,7 @@
             max-width: 8.5in;
             /* Standard US Letter width */
             margin: 0.5rem auto;
-            /* Reduced margin */
             padding: 0.5in 0.5in 0.5in 0.5in;
-            /* Reduced overall padding for cleaner screen view */
             background-color: white;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
@@ -40,16 +38,16 @@
         @media print {
             body {
                 background-color: white;
-                font-size: 9.0pt;
-                /* Aggressively reduced base print font size */
+                font-size: 8.5pt;
+                /* Further reduced base print font size */
             }
 
             .resume-container {
                 max-width: none;
                 margin: 0;
                 /* Aggressively tight print padding */
-                padding: 0.25in 0.3in 0.25in 0.3in;
-                /* Reduced side margins for max width usage */
+                padding: 0.2in 0.3in 0.2in 0.3in;
+                /* Minimized all page padding */
                 box-shadow: none;
             }
 
@@ -65,16 +63,21 @@
             }
 
             .text-xs {
-                /* Even tighter font size for print descriptions */
-                font-size: 0.6rem;
-                /* Aggressively reduced descriptive font size */
+                /* Minimized descriptive font size */
+                font-size: 0.58rem;
                 line-height: 1.3;
-                /* Slight increase for readability */
             }
 
             /* Ensure dot characters are black in print */
             .filled-char {
                 color: #000 !important;
+            }
+
+            /* Ensure section bars print correctly using borders instead of background-color */
+            .section-title-bar {
+                background-color: transparent !important;
+                border-top: 1px solid #c0c0c0 !important;
+                border-bottom: 1px solid #c0c0c0 !important;
             }
         }
 
@@ -83,14 +86,13 @@
             display: none;
         }
 
-        /* Section Title Bar */
+        /* Section Title Bar - Screen Style (uses background for visual effect) */
         .section-title-bar {
             background-color: #e6e6e6;
-            /* Light gray background */
+            /* Light gray background for screen view */
             padding: 0.2rem 0;
-            /* Minimal padding */
-            margin-top: 0.6rem;
-            /* Reduced margin top */
+            margin-top: 0.5rem;
+            /* Minimized margin top */
             margin-bottom: 0.1rem;
             /* Minimal margin bottom */
         }
@@ -99,18 +101,15 @@
         .diamond-bullet::before {
             content: "\2726";
             /* Unicode for a four-point star (close to the diamond in the image) */
-            margin-right: 0.4rem;
-            /* Reduced margin */
+            margin-right: 0.3rem;
+            /* Further reduced margin */
             color: #1f2937;
-            /* Dark gray */
-            font-size: 0.8rem;
+            font-size: 0.7rem;
+            /* Reduced bullet size */
         }
 
-        /* Skill dot character styling is no longer needed but kept for cleanliness */
-        .skill-bar-container {
-            display: none;
-        }
-
+        /* Skill dot character styling is removed */
+        .skill-bar-container,
         .dot-char {
             display: none;
         }
@@ -143,13 +142,13 @@
     <div class="resume-container">
 
         <!-- HEADER: NAME & CONTACT INFO -->
-        <header class="text-center mb-2">
+        <header class="text-center mb-1">
             <h1 class="text-xl font-bold tracking-wider text-primary-dark">JAIRAJ CHILUKALA</h1>
             <p class="text-base text-gray-700 font-medium mt-0.5">Computer Science Student</p>
 
-            <div class="mt-1.5 text-xs text-gray-600 space-y-0.5">
+            <div class="mt-1 text-xs text-gray-600 space-y-0.5">
                 <p>Hyderabad, India, Sri Shailaja Harmony Rd No.4, Kothapet, 500102</p>
-                <p class="flex justify-center items-center space-x-3">
+                <p class="flex justify-center items-center space-x-2">
                     <span>jairajchilukalagit@gmail.com</span>
                     <span class="text-xl leading-none">|</span>
                     <span>+91 9010139434</span>
@@ -192,7 +191,7 @@
         </div>
 
         <!-- Item 1: Teaching Assistant -->
-        <div class="mt-1">
+        <div class="mt-0.5">
             <div class="flex justify-between items-start text-xs mb-0.5">
                 <div class="font-semibold text-primary-dark flex items-center">
                     <span class="diamond-bullet"></span> Teaching Assistant, Woxsen University
@@ -209,7 +208,7 @@
         </div>
 
         <!-- Item 2: Vice President - Life Long Learning, Student Council Woxsen -->
-        <div class="mt-1">
+        <div class="mt-0.5">
             <div class="flex justify-between items-start text-xs mb-0.5">
                 <div class="font-semibold text-primary-dark flex items-center">
                     <span class="diamond-bullet"></span> Vice President - Life Long Learning, Student Council Woxsen
@@ -226,7 +225,7 @@
         </div>
 
         <!-- Item 3: Campus Club, Hackwithindia -->
-        <div class="mt-1">
+        <div class="mt-0.5">
             <div class="flex justify-between items-start text-xs mb-0.5">
                 <div class="font-semibold text-primary-dark flex items-center">
                     <span class="diamond-bullet"></span> Campus Lead, Hackwithindia
@@ -243,7 +242,7 @@
         </div>
 
         <!-- Item 4: Digital Head, Street Cause Hyderabad (NGO) -->
-        <div class="mt-1">
+        <div class="mt-0.5">
             <div class="flex justify-between items-start text-xs mb-0.5">
                 <div class="font-semibold text-primary-dark flex items-center">
                     <span class="diamond-bullet"></span> Digital Head, Street Cause Hyderabad (NGO)
@@ -260,7 +259,7 @@
         </div>
 
         <!-- Item 5: Outreach Head, CodeX -->
-        <div class="mt-1">
+        <div class="mt-0.5">
             <div class="flex justify-between items-start text-xs mb-0.5">
                 <div class="font-semibold text-primary-dark flex items-center">
                     <span class="diamond-bullet"></span> Outreach Head, CodeX
@@ -277,7 +276,7 @@
         </div>
 
         <!-- Item 6: Vice President, Law Club -->
-        <div class="mt-1">
+        <div class="mt-0.5">
             <div class="flex justify-between items-start text-xs mb-0.5">
                 <div class="font-semibold text-primary-dark flex items-center">
                     <span class="diamond-bullet"></span> Vice President, Law Club
@@ -299,7 +298,7 @@
         </div>
 
         <!-- Education Item 1: Woxsen University -->
-        <div class="mt-1">
+        <div class="mt-0.5">
             <div class="flex justify-between items-start text-xs mb-0.5">
                 <div class="font-semibold text-primary-dark">Woxsen University</div>
                 <div class="text-right text-gray-600 space-y-0">
@@ -314,7 +313,7 @@
         </div>
 
         <!-- Education Item 2: Aakash Institute -->
-        <div class="mt-1">
+        <div class="mt-0.5">
             <div class="flex justify-between items-start text-xs mb-0.5">
                 <div class="font-semibold text-primary-dark">Aakash Institute</div>
                 <div class="text-right text-gray-600 space-y-0">
@@ -334,12 +333,12 @@
             <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Skills</h2>
         </div>
 
-        <div class="mt-1 text-xs text-gray-700 ml-2 leading-tight">
-            <p class="mb-1">
+        <div class="mt-0.5 text-xs text-gray-700 ml-2 leading-tight space-y-0.5">
+            <p>
                 <span class="font-semibold">Programming & Web:</span> Python, JavaScript, SQL, Node.JS, React, HTML,
                 CSS.
             </p>
-            <p class="mb-1">
+            <p>
                 <span class="font-semibold">AI & Data:</span> LLM, NLP, Power BI.
             </p>
             <p>
@@ -352,7 +351,7 @@
             <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Languages</h2>
         </div>
 
-        <div class="mt-1 text-xs text-gray-700 ml-2 leading-tight">
+        <div class="mt-0.5 text-xs text-gray-700 ml-2 leading-tight">
             <p>
                 English (Native/Full Proficiency), Telugu (Native/Full Proficiency), Hindi (Professional Working),
                 Spanish (Limited Working).
@@ -363,7 +362,7 @@
         <div class="section-title-bar text-center">
             <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Projects</h2>
         </div>
-        <div class="mt-1 text-sm text-gray-700 space-y-1">
+        <div class="mt-0.5 text-sm text-gray-700 space-y-0.5">
             <div>
                 <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">Binary Addition using Turing Machine</h3>
                 <p class="text-xs leading-tight ml-2">
@@ -411,7 +410,7 @@
         <div class="section-title-bar text-center">
             <h2 class="text-sm font-semibold tracking-widest text-primary-dark uppercase">Research</h2>
         </div>
-        <div class="mt-1 text-sm text-gray-700 space-y-1">
+        <div class="mt-0.5 text-sm text-gray-700 space-y-0.5">
             <div>
                 <h3 class="font-semibold text-primary-dark mb-0.5 text-xs">1. Solar Tracking and Smart Shed</h3>
                 <p class="text-xs leading-tight ml-2">
